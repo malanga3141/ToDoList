@@ -2,7 +2,9 @@
 {% block title %}View{% endblock %}
 
 {% block content %}
-    {% for td in user.todolist.all %}
-        <p><a href="/{{td.id}}">{{td.name}}</a> </p>
-    {% endfor %}
+    <ul class="list-group list-group-flush">
+        {% for td in user.todolist.all %}
+            <li class="list-group-item"><a href="/{{td.id}}">{{td.name}}</a></li>
+        {% endfor %}
+    </ul>
 {% endblock %}
